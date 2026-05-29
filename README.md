@@ -32,15 +32,50 @@
 
 ## 安装
 
-将此技能目录放入你的 Codex skills 目录：
+这是一个兼容 Codex Skills 目录结构的 Skill，不是 Python 包或 npm 包。通用安装方式是：把整个仓库放到你所使用客户端的 skills 目录下。以下以 Codex 的默认目录 `~/.codex/skills` 为例。
+
+### 方式一：通过 Git 安装（推荐）
 
 ```bash
-# 方式一：直接复制到 skills 目录
-cp -r content-analyzer ~/.codex/skills/
-
-# 方式二：通过 AI Agent 安装（推荐Codex、Claude Code、WorkBuddy）
-# 在 Codex 中执行：/skill-install content-analyzer
+mkdir -p ~/.codex/skills
+git clone https://github.com/fxyadela/content-analyzer.git ~/.codex/skills/content-analyzer
 ```
+
+后续更新：
+
+```bash
+cd ~/.codex/skills/content-analyzer
+git pull
+```
+
+### 方式二：手动下载安装
+
+1. 在 GitHub 页面点击 **Code → Download ZIP**
+2. 解压后将文件夹重命名为 `content-analyzer`
+3. 移动到 `~/.codex/skills/content-analyzer`
+
+最终目录应类似：
+
+```text
+~/.codex/skills/content-analyzer/
+├── SKILL.md
+├── README.md
+├── assets/
+├── references/
+└── scripts/
+```
+
+安装后，重启 Codex 或开启一个新会话，让 Skill 被重新加载。
+
+### 可选：本地校验
+
+如果你的 Codex 环境里有系统自带的 skill 校验脚本，可以运行：
+
+```bash
+python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py ~/.codex/skills/content-analyzer
+```
+
+看到 `Skill is valid!` 即表示基础结构可被识别。
 
 ## 使用方式
 
@@ -75,8 +110,7 @@ content-analyzer/
 │   ├── quality-handling.md  # 不同质量内容的处理策略
 │   └── api_reference.md  # 参考文档占位符
 ├── assets/
-│   ├── output-template.md # 输出笔记完整模板
-│   └── example_asset.txt
+│   └── output-template.md # 输出笔记完整模板
 └── scripts/
     └── example.py        # 扩展脚本占位符
 ```
