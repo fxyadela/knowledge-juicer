@@ -4,6 +4,8 @@
 
 支持 YouTube、X (Twitter)、Reddit、博客等多平台内容输入，基于布鲁姆分类学等教学法框架，自动生成包含概念图、自我评估、应用场景的完整学习材料。
 
+> Obsidian 和 IMA 只是额外的保存功能：你可以把分析结果存到自己的 Obsidian Vault 或 IMA 知识库里。不配置它们也能正常使用，Knowledge Juicer 的核心功能就是分析内容并生成学习笔记。
+
 ## 效果示例
 
 输入一个 YouTube 视频链接 → 输出：
@@ -43,7 +45,7 @@ npx github:fxyadela/knowledge-juicer
 安装器会自动完成：
 
 1. 安装 Skill 到 `~/.codex/skills/knowledge-juicer`
-2. 引导你选择自己的 Obsidian Vault
+2. 可选引导你选择自己的 Obsidian Vault
 3. 可选配置自己的 IMA Client ID / API Key
 4. 生成本机配置文件 `config.local.json`
 
