@@ -38,7 +38,7 @@
 
 ```bash
 mkdir -p ~/.codex/skills
-git clone https://github.com/fxyadela/content-analyzer.git ~/.codex/skills/knowledge-juicer
+git clone https://github.com/fxyadela/knowledge-juicer.git ~/.codex/skills/knowledge-juicer
 ```
 
 后续更新：
