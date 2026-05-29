@@ -1,6 +1,6 @@
-# content-analyzer
+# Knowledge Juicer
 
-将视频、文章、社交媒体内容自动转化为结构化学习笔记的 Skill。
+把视频、文章、社交媒体内容榨成结构化学习笔记的个人 Skill。
 
 支持 YouTube、X (Twitter)、Reddit、博客等多平台内容输入，基于布鲁姆分类学等教学法框架，自动生成包含概念图、自我评估、应用场景的完整学习材料。
 
@@ -38,26 +38,26 @@
 
 ```bash
 mkdir -p ~/.codex/skills
-git clone https://github.com/fxyadela/content-analyzer.git ~/.codex/skills/content-analyzer
+git clone https://github.com/fxyadela/content-analyzer.git ~/.codex/skills/knowledge-juicer
 ```
 
 后续更新：
 
 ```bash
-cd ~/.codex/skills/content-analyzer
+cd ~/.codex/skills/knowledge-juicer
 git pull
 ```
 
 ### 方式二：手动下载安装
 
 1. 在 GitHub 页面点击 **Code → Download ZIP**
-2. 解压后将文件夹重命名为 `content-analyzer`
-3. 移动到 `~/.codex/skills/content-analyzer`
+2. 解压后将文件夹重命名为 `knowledge-juicer`
+3. 移动到 `~/.codex/skills/knowledge-juicer`
 
 最终目录应类似：
 
 ```text
-~/.codex/skills/content-analyzer/
+~/.codex/skills/knowledge-juicer/
 ├── SKILL.md
 ├── README.md
 ├── assets/
@@ -72,7 +72,7 @@ git pull
 如果你的 Codex 环境里有系统自带的 skill 校验脚本，可以运行：
 
 ```bash
-python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py ~/.codex/skills/content-analyzer
+python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py ~/.codex/skills/knowledge-juicer
 ```
 
 看到 `Skill is valid!` 即表示基础结构可被识别。
@@ -103,7 +103,7 @@ python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py ~/.codex
 ## 文件结构
 
 ```
-content-analyzer/
+knowledge-juicer/
 ├── SKILL.md              # 技能主文件（触发词、工作流程）
 ├── references/
 │   ├── pedagogy.md       # 教学法框架（布鲁姆分类学、认知负荷理论等）
@@ -144,4 +144,4 @@ MIT License — 详见 [LICENSE](LICENSE)
 
 ---
 
-**作者**：Cora（捏捏番茄）| **技能类型**：Codex 教学内容处理技能
+**作者**：Cora（捏捏番茄）| **技能类型**：Codex 学习内容榨汁 Skill
