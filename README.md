@@ -1,6 +1,6 @@
 # content-analyzer
 
-将视频、文章、社交媒体内容自动转化为结构化学习笔记的 WorkBuddy Skill。
+将视频、文章、社交媒体内容自动转化为结构化学习笔记的 Skill。
 
 支持 YouTube、X (Twitter)、Reddit、博客等多平台内容输入，基于布鲁姆分类学等教学法框架，自动生成包含概念图、自我评估、应用场景的完整学习材料。
 
@@ -32,19 +32,19 @@
 
 ## 安装
 
-将此技能目录放入你的 WorkBuddy skills 目录：
+将此技能目录放入你的 Codex skills 目录：
 
 ```bash
 # 方式一：直接复制到 skills 目录
-cp -r content-analyzer ~/.workbuddy/skills/
+cp -r content-analyzer ~/.codex/skills/
 
-# 方式二：通过 WorkBuddy 安装（推荐）
-# 在 WorkBuddy 中执行：/skill-install content-analyzer
+# 方式二：通过 AI Agent 安装（推荐Codex、Claude Code、WorkBuddy）
+# 在 Codex 中执行：/skill-install content-analyzer
 ```
 
 ## 使用方式
 
-安装后，向 WorkBuddy 发送以下类型的指令即可触发：
+安装后，向 Codex 发送以下类型的指令即可触发：
 
 - 「分析这个」+ 链接
 - 「提取教学内容」+ 链接或文本
@@ -110,4 +110,4 @@ MIT License — 详见 [LICENSE](LICENSE)
 
 ---
 
-**作者**：方晓宇（捏捏番茄）| **技能类型**：WorkBuddy 教学内容处理技能
+**作者**：Cora（捏捏番茄）| **技能类型**：Codex 教学内容处理技能
