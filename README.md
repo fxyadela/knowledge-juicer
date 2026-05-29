@@ -32,9 +32,38 @@
 
 ## 安装
 
-这是一个兼容 Codex Skills 目录结构的 Skill，不是 Python 包或 npm 包。通用安装方式是：把整个仓库放到你所使用客户端的 skills 目录下。以下以 Codex 的默认目录 `~/.codex/skills` 为例。
+这是一个兼容 Codex Skills 目录结构的 Skill。面向普通用户，推荐直接用安装器；熟悉 Git 的用户也可以手动安装。
 
-### 方式一：通过 Git 安装（推荐）
+### 方式一：一键安装（推荐）
+
+```bash
+npx github:fxyadela/knowledge-juicer
+```
+
+安装器会自动完成：
+
+1. 安装 Skill 到 `~/.codex/skills/knowledge-juicer`
+2. 引导你选择自己的 Obsidian Vault
+3. 可选配置自己的 IMA Client ID / API Key
+4. 生成本机配置文件 `config.local.json`
+
+安装完成后，重启 Codex 或开启一个新会话，让 Skill 被重新加载。
+
+如果你只想安装，不想现在配置 Obsidian / IMA：
+
+```bash
+npx github:fxyadela/knowledge-juicer -- --skip-config
+```
+
+如果你已经安装过，想覆盖更新：
+
+```bash
+npx github:fxyadela/knowledge-juicer -- --force
+```
+
+> 说明：`config.local.json` 只保存在你的电脑里，不会上传到 GitHub。每个用户都需要配置自己的 Obsidian 和 IMA 信息。
+
+### 方式二：通过 Git 手动安装
 
 ```bash
 mkdir -p ~/.codex/skills
@@ -48,7 +77,7 @@ cd ~/.codex/skills/knowledge-juicer
 git pull
 ```
 
-### 方式二：手动下载安装
+### 方式三：下载 ZIP 手动安装
 
 1. 在 GitHub 页面点击 **Code → Download ZIP**
 2. 解压后将文件夹重命名为 `knowledge-juicer`
@@ -64,8 +93,6 @@ git pull
 ├── references/
 └── scripts/
 ```
-
-安装后，重启 Codex 或开启一个新会话，让 Skill 被重新加载。
 
 ### 可选：本地校验
 

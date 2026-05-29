@@ -1,0 +1,26 @@
+{
+  "name": "knowledge-juicer",
+  "version": "0.1.0",
+  "description": "Install the Knowledge Juicer Codex Skill.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "knowledge-juicer": "bin/install.js"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "LICENSE",
+    "assets/",
+    "references/",
+    "scripts/",
+    "bin/install.js"
+  ],
+  "keywords": [
+    "codex",
+    "skill",
+    "learning",
+    "obsidian",
+    "ima"
+  ]
+}

@@ -2,6 +2,7 @@
 *.env
 .env.*
 config.json
+config.local.json
 *.txt~
 
 # macOS

@@ -82,9 +82,19 @@ description: 将视频/文章内容转化为优化的学习材料。支持 YouTu
 
 完成笔记生成后，可将内容保存到本地或知识库。此步骤为可选，根据实际环境配置决定。
 
+#### 本地配置读取
+
+如果 Skill 目录下存在 `config.local.json`，先读取它作为本机配置来源。该文件由安装器生成，通常包含：
+
+- `obsidian.vaultPath`：用户自己的 Obsidian Vault 路径
+- `ima.credentialsDir`：用户自己的 IMA 凭证目录，默认 `~/.config/ima`
+- `ima.defaultKnowledgeBaseName` / `ima.defaultKnowledgeBaseId`：用户自己的默认 IMA 知识库
+
+`config.local.json` 只属于用户本机，不应写入公开仓库，也不要在输出中展示 API Key。
+
 #### 5.1 保存到 Obsidian（可选）
 
-**Vault 根路径**：使用 `find /Users -maxdepth 4 -name "Obsidian*" -type d 2>/dev/null` 自动探测，或提示用户手动指定。
+**Vault 根路径**：优先读取 `config.local.json` 中的 `obsidian.vaultPath`。没有配置时，使用 `find /Users -maxdepth 4 -name "Obsidian*" -type d 2>/dev/null` 自动探测，或提示用户手动指定。
 
 **分类目录映射**：
 
@@ -102,7 +112,7 @@ description: 将视频/文章内容转化为优化的学习材料。支持 YouTu
 
 若用户已配置 IMA 知识库，可将笔记上传。
 
-**配置方式**：在 `~/.config/ima/` 下放置 `client_id` 和 `api_key` 文件，并在 SKILL.md 中填写目标知识库 ID。
+**配置方式**：在 `~/.config/ima/` 下放置 `client_id` 和 `api_key` 文件，并在 `config.local.json` 中填写目标知识库名称或 ID。
 
 > **开源用户注意**：此功能需要用户自行申请 IMA API 凭证并配置知识库 ID，详见 IMA 官方文档。
 
