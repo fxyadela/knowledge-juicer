@@ -1,7 +1,7 @@
 {
   "name": "knowledge-juicer",
-  "version": "0.1.0",
-  "description": "Install the Knowledge Juicer Codex Skill.",
+  "version": "0.2.0",
+  "description": "Install the ADHD-friendly Knowledge Juicer Codex Skill.",
   "license": "MIT",
   "type": "module",
   "bin": {
